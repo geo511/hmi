@@ -1,0 +1,146 @@
+<html>
+	
+	<header>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+		<title>Starter Template - Materialize</title>
+
+		<!-- CSS  -->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link href="css/quiz.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+		
+		<small>Wellcome<span>&#160;</span> Mike R. Smith</small>
+	</header>
+	
+	<body>
+		<div id="emc-score"></div>
+		
+		<div class="wrap">		
+			<div class="main">
+				<!-- button to initialize the exam -->
+				<button type="button" class="start">CLICK HERE TO START</button>
+				<div class="started">
+					<input type="text" class="input" placeholder="Your exam have started">
+					<div class="status">
+						<div class="status-timer">
+						  Time remaining: <span class="time-remaining"></span>
+						</div>					
+					</div>	
+				</div>
+				
+				<!-- subtitle bar -->
+				<h5 class="sub_title">The book of Hebrews Quiz<span>&#160;</span><i class="material-icons">layers</i></h5>
+				
+				<!-- begin of the questions -->
+				<div class="reveal">
+				
+					<!-- first row -->
+					<div class="row">
+						<section data-quiz-item>
+							<div class="question">The book of Hebrews was wrote after 70 D.C.?<br>Ex: <code>the temple was destroyed</code></div>
+							<div class="choices" data-choices='["Yes","No"]'>
+							</div>
+						</section>
+						<section data-quiz-item>
+							<div class="question"><code>The book of Hebrews</code> is one of the most important books, talking from a doctrinal point of view</div>
+							<div class="choices" data-choices='["Yes","No"]'>
+							</div>
+						</section>
+					</div>
+					
+					<!-- second row -->
+					<div class="row">
+						<section data-quiz-item>
+							<div class="question">The beauty of Hebrews is recognized by <code>theologians</code> through all the ages and is seen as the most <code>eloquent</code> book of the N.T.</div>
+							<div class="choices" data-choices='["True","False"]'>
+							</div>
+						</section>
+						<section data-quiz-item>
+							<div class="question">We have the certainty that <code>The Apostle Paul</code> was the author of Hebrews</div>
+							<div class="choices" data-choices='["True","False"]'>
+							</div>
+						</section>
+					</div>
+					
+					<!-- third row -->
+				   <div class="row">
+						<section data-quiz-item>
+							<div class="question">The book of <code>Hebrews</code>was written to the Universal church, to all the believers in Christ?</div>
+							<div class="choices" data-choices='["Yes","No"]'>
+							</div>
+						</section>
+						<section data-quiz-item>
+							<div class="question">The purpose of the book of <code>Hebrews</code>was to help <code>Jewsih Believers,</code>who had understanding about their religion given by God, in the transition between the Old Testament and the New Testament?</div>
+							<div class="choices" data-choices='["Yes","No"]'>
+							</div>
+						</section>
+					</div>
+					
+					<!-- fourth -->
+					<div class="row last">
+						<section data-quiz-item>
+							<div class="question">The author of <code>Hebrews</code> proves that the New Testament is a <code>fulfillment</code> of the shadows that the Old Testament give us</div>
+							<div class="choices" data-choices='["True","False"]'>
+							</div>
+						</section>
+					   <section data-quiz-item>
+							<div class="question"> The main revelation of the <code>High Priest</code> in Hebrews was his ministry on the Day of Atonement ( Yom Kippur ) </div>
+							<div class="choices" data-choices='["True","False"]'>
+							</div>
+					  </section>
+					</div>
+					
+					<!-- fifth -->
+					<div class="row last">
+						<section data-quiz-item>
+							<div class="question">The old testament was the shadow and Christ is the life, we shouldn't study deeply the shadow nowadays</div>
+							<div class="choices" data-choices='["True","False"]'>
+							</div>
+						</section>
+					   <section data-quiz-item>
+							<div class="question">The key word in <code>Hebrews</code> is the word <code>BETTER.</code></div>
+							<div class="choices" data-choices='["True","False"]'>
+							</div>
+					  </section>
+					</div>
+				</div>
+			</div>		
+			
+			<!-- submit's exam button -->
+			<div class="submit">
+				<button class="btn trigger"  href="javascript:;" id="emc-submit">Submit Answers</button>			
+				<!-- modal window -->
+				<div class="modal-wrapper">
+					<div class="modal">
+						<div class="head">
+							<a class="btn-close trigger" href="javascript:;"></a>
+						</div>
+						<div class="content">
+							<h4>YOUR QUIZ IS FINISH.<span>&#160;</span><i class="material-icons">layers</i></h4>
+							<p>Thank you continue the next lesson<span>&#160;</span><i class="material-icons">launch</i></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		
+		<!-- MHI logo -->
+		
+		<object type="image/svg+xml" data="svg/hmiNewLogo.svg"></object>
+		
+		<!-- Footer section -->
+		<footer>
+			<div id="emc-progress"></div>
+		</footer>
+		
+		<div class="attrib">
+		  <p><span>&#169;</span>Hebron Ministerial Institute <i class="fa fa-long-arrow-right"></i> <a href="http://hebronministries.com/" target="_blank">hebronministries.com</a></p>
+		</div>
+	
+		<!--  Scripts-->
+		<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script src="js/quiz.js"></script>
+	</body>	
+</html>
+

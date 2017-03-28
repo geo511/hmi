@@ -1,0 +1,472 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Student Dashboard</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,800,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="css/index.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <nav role="navigation" class="nav-table" id="myTopnav">
+        <ul>
+            <li>
+                <span>
+                    <div id="nav-icon1" onclick="openNav()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </span>
+            </li>
+            <!-- mhi Logo -->
+            <li class="top_navbar"><a id="hebron_icon"><object id="logo" type="image/svg+xml" data="./svg/HMILogoOne.svg"></object></a></li>
+            
+             <!-- Hebrews Pic -->
+            <li class="top_navbar"><a id="hebrews_image"><img id="hebrews_pic" src="images/hebrews.jpg"><span id="course_name">HEBREWS</span></a></li>
+            
+            <!-- Admissions Dropdown -->
+            <li href="#" class="top_navbar"><a>Admissions<i class="fa fa-caret-down" aria-hidden="true"></i></a>
+                <ul class="dropdown_menu" id="admissions_dropup">
+                    <li class="dropdown_links">Admission Requirements</li>
+                    <li class="dropdown_links">Admission Process</li>
+                    <li class="dropdown_links">Tuitions and Fees</li>
+                    <li class="dropdown_links">Scholarship Program</li>
+                    <li class="dropdown_links">Contact Admission</li>
+                    <li class="dropdown_links">Apply Now</li>
+                </ul>
+            </li>
+            
+            <!-- Program Dropdown -->
+            <li class="top_navbar" href="#"><a>Program<i class="fa fa-caret-down" aria-hidden="true"></i></a>
+                <ul class="dropdown_menu" id="program_dropup">
+                    <li>Curriculum</li>
+                    <li>Plans Offered</li>
+                    <li>Calendar</li>
+                </ul>
+            </li>
+            
+            <!-- Campuses Dropdown -->
+            <li class="top_navbar" href="#"><a>Campuses<i class="fa fa-caret-down" aria-hidden="true"></i></a>
+                <ul class="dropdown_menu" id="campuses_dropup">
+                    <li>Guatemala Campus Location</li>
+                    <li>Visiting Campus in Guatemala</li>
+                    <li>Video MHI Locations</li>
+                    <li>MHI On Line Locations</li>
+                    <li>MHI Correspondence Courses</li>
+                </ul>
+            </li>
+            
+            <!-- About Dropdown -->
+            <li class="top_navbar" href="#"><a>About Us<i class="fa fa-caret-down" aria-hidden="true"></i></a>
+                
+            </li>
+            
+            <!-- Language Dropdown -->
+            <li class="top_navbar" href="#"><a class="main_menu">EN<i class="fa fa-caret-down" aria-hidden="true"></i></a>
+                
+            </li>
+            
+            <li class="top_navbar" href="#" id="img_a"><a><img src="images/avatar.png" class="pic_circle"><span class="vertical_bar">|</span><i class="fa fa-caret-down" id="avatar_caret" aria-hidden="true"></i></a>
+                <ul class="dropdown_menu" id="user_dropup">
+                    <li>Profile</li>
+                    <li>Settings</li>
+                    <li>My Home</li>
+                    <li style="border-top:1px solid #cccccc;">Sign Out</li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <!--SIDE NAV-->
+    <div id="mySidenav_background" onclick="closeNav()">
+        <div id="mySidenav" class="sidenav">
+        
+            <a href="#"><i class="material-icons tooltipped" data-tooltip="home" data-position="right" data-delay="50">home</i><span class="sidenav_tooltip">Home</span></a>
+            <a href="#"><i class="material-icons tooltipped" data-tooltip="catalog" data-position="right" data-delay="50">library_books</i><span class="sidenav_tooltip">Catalog</span></a>
+            <a href="#"><i class="material-icons tooltipped" data-tooltip="forum" data-position="right" data-delay="50">forum</i><span class="sidenav_tooltip">Forum</span></a>
+            <a href="#"><i class="material-icons tooltipped" data-tooltip="progress" data-position="right" data-delay="50">insert_chart</i><span class="sidenav_tooltip">Progress</span></a>
+            <a href="#"><i class="material-icons tooltipped" data-tooltip="settings" data-position="right" data-delay="50" target="tune">tune</i><span class="sidenav_tooltip">Settings</span></a>
+            <a href="#"><i class="material-icons tooltipped" data-tooltip="log out" data-position="right" data-delay="50">exit_to_app</i><span class="sidenav_tooltip">Log Out</span></a>
+        </div>
+    </div>
+    <!-- Finish of SIDE NAV -->
+    
+    <!--COLLAPSIBLE LESSONS-->       
+    
+    <div id="collapsible_bg" class="lesson_bg"></div>
+        <div class="collapsible_container" id="LessonSidenav">
+            
+            <div class="lesson_title"><i class="fa fa-book" aria-hidden="true"></i>Lessons</div>
+            
+            <!-- Course Start -->
+            <button class="accordion">Course Start <i class="fa fa-clock-o" aria-hidden="true"></i><span class="duration">5:10</span></button>
+            <div class="panel">
+                <ol id="Course Start">
+                    <li class="list_parts" onclick="loadVideo()" id="prayer">Presentation & Prayer<span class="duration">4:15</span></li>
+                    <li class="list_parts" onclick="loadVideo()" id="assigment">Assigment<span class="duration">0:54</span></li>
+                    
+                </ol>
+            </div>
+            
+            <!-- Why Study Hebrews -->       
+            <button class="accordion">Why Study Hebrews<i class="fa fa-clock-o" aria-hidden="true"></i><span class="duration">1:35</span></button>
+            <div class="panel">
+                <ol id="Why Study Hebrews">
+                    <li class="list_parts" onclick="loadVideo()" id="whyStudy">Why Study Hebrews<span class="duration">0:54</span></li>
+                    <li class="list_parts" onclick="loadVideo()" id="whatStudy">What we are going to Study...<span class="duration">1:37</span></li>
+                    
+                </ol>
+            </div>
+            
+            <!-- Introduction -->
+            <button class="accordion">Introduction<i class="fa fa-clock-o" aria-hidden="true"></i><span class="duration">4:13</span></button>
+            <div class="panel">
+                <ol id="Introduction">
+                    <li class="list_parts" onclick="loadVideo()" id="author">Author of the Book<span class="duration">3:04</span></li>
+                    <li class="list_parts" onclick="loadVideo()" id="date">Date of the Book<span class="duration">1:44</span></li>
+                    <li class="list_parts" onclick="loadVideo()" id="toWho">To Whom it was written<span class="duration">0:25</span></li>
+                    <li class="list_parts" onclick="loadVideo()" id="purpouse">Purpose of the Book<span class="duration">0:58</span></li>
+                    <li class="list_parts" id="exercise"><a target="_blank" href="exercise.html" style="color:#a6a6a6; text-decoration:none">First Exercise</a><span class="duration">5:00</span></li>
+                </ol>
+            </div>
+            
+            <!-- Fundamental Aspects -->
+            <button class="accordion">Fundamental Aspects<i class="fa fa-clock-o" aria-hidden="true"></i><span class="duration">3:30</span></button>
+            <div class="panel">
+                <ol id="Fundamental Aspects">
+                    <li class="list_parts" onclick="loadVideo()" id="root">The Root of Christianity<span class="duration">1:08</span></li>
+                    <li class="list_parts" onclick="loadVideo()" id="whatShow">What shows the Author<span class="duration">2:04</span></li>
+                    <li class="list_parts" onclick="loadVideo()" id="highPriest">Christ the High Priest<span class="duration">2:18</span></li>
+                </ol>
+            </div>
+            
+            <!-- First Quiz -->
+            <button class="accordion">First Quiz<i class="fa fa-clock-o" aria-hidden="true"></i><span class="duration">10:00</span></button>
+            <div class="panel">
+                <ol>
+                    <li class="list_parts"><a target="_blank" href="exam.html" style="color:#a6a6a6; text-decoration:none">Click Here for Begin the Quiz</a></li>
+                    
+                </ol>
+            </div>
+            
+            <!-- Lesson One -->
+            <button class="accordion">Lesson 1<i class="fa fa-clock-o" aria-hidden="true"></i><span class="duration">48:05</span></button>
+            <div class="panel">
+                <ol>
+                    <li class="list_parts">Purpose of the Course</li>
+                    <li class="list_parts">Historical Background</li>
+                    <li class="list_parts">About Book's Author</li>
+                </ol>
+            </div>
+            
+        </div>
+    <!-- Final COLLAPSIBLE SIDENAV-->
+    
+    
+    <!-- Start of VIDEO SECTION -->
+    <div id="middle_line">
+        <div id="video_line">
+            <div id="video_section">
+                
+                <!--Video Header-->
+                <div id="video_header">
+                    <div id="menu_icon" onclick="openSideNav()"><i class="material-icons">menu</i></div>
+                    <div id="lessons">lessons</div>
+                    <div id="breadcrumb">Course Start / Presentation & Prayer</div>
+                    <div id="prev" onclick="loadPrevVideo()">&#10094;&nbsp;prev</div>
+                    <div id="next" onclick="loadNextVideo()">next&nbsp;&#10095;</div>
+                </div>
+                
+                <!-- Video container -->
+                <div id="video_container" class="video_container">
+                    <video id="video" controls preload="metadata">
+                        <source id ="mp4" src="video/prayer.mp4">
+                        <track id="track_spanish" label="Spanish" kind="subtitles" srclang="es" src="transcripts/vtt/Spprayer.vtt" >
+                        <track id="track_english" label="English" kind="subtitles" srclang="en" src="transcripts/vtt/prayer.vtt">
+                        <!-- Offer download -->
+                        <a href="#">Download MP4</a>
+                    </video>
+                </div>
+                
+                <!--VIDEO CONTROLS-->
+                <div id="videoControls">
+                    <!--Progress Bar-->
+                    <div id="progress_container">
+                        <input type="range" id="progressBar" value="0">
+                        <span id="progress"></span>
+                    </div>
+                    
+                    <!--Controls-->
+                    <div id="buttonControls">
+                        <!--Play/Pause Controls-->
+                        <div id="play">
+                            <i class="fa fa-play" aria-hidden="true" id="play_button"></i>
+                            <i class="fa fa-pause" aria-hidden="true" id="pause"></i>
+                        </div>
+                        
+                        <!--Stop Controls-->
+                        <div id="stop">
+                            <i class="fa fa-stop" aria-hidden="true" id="stop_icon"></i>
+                        </div>
+                        
+                        <!--Duration-->
+                        <div id="duration">00:00 / <span id="total_duration">04:15</span></div>
+                        
+                        <!--Speed Control-->
+                        <div id="fastFwd">1x Speed</div>
+                        
+                        <!--Mute Controls-->
+                        <div id="mute">
+                            <i class="fa fa-microphone" id="unmute_icon" aria-hidden="true"></i><i class="fa fa-microphone-slash" id="mute_icon" aria-hidden="true"></i>
+                        </div>
+                        
+                        <!--Volume Slider-->
+                        <div id="range"><i class="fa fa-volume-down" aria-hidden="true"></i><input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="1"><i class="fa fa-volume-up" aria-hidden="true"></i></div>
+                        
+                        <!--Full Screen-->
+                        <div id="fullScreen">FullScreen <i class="fa fa-arrows-alt" aria-hidden="true"></i></div>
+                    </div>
+                </div>
+                
+                
+                <!--FINAL VIDEO CONTROLS-->
+                
+                <!--Video Footer-->
+                <div id="video_footer">
+                    <!-- This button works with modal window below -->
+                    <div id="question"><i class="material-icons" id="question_icon">forum</i>Post a question</div>
+                    <div id="materials"><span id="lesson_span">Lesson Materials</span></div>
+                    <div id="transcript_button"><i class="material-icons" id="transcript_icon">subtitles</i>&nbsp;</div>
+                </div>
+                
+                <!--Lesson Materials Section-->
+                <div id="lesson_box">
+                    <div class="material_close" id="material_content">
+                        <div id="material_content_inner" class="content_inner_close">
+                            <div class="lesson_materials">
+                                <h2 class="matBox_title">&nbsp;&nbsp;Lesson Materials</h2>
+                                <ul class="matBox_list">
+                                    <li><i class="fa fa-folder-o" aria-hidden="true"></i><a class="download">Transcript Zip File</a></li>
+                                    <li><i class="fa fa-file-pdf-o" aria-hidden="true"></i><a class="download">Introduction to Hebrews</a></li>
+                                </ul>
+                                <hr style="width:180%; margin-left: 10%; height:1px; border:0; border-top:1px solid gray;">
+                            </div>
+                            
+                            <div class="course_materials">
+                                <h2 class="matBox_title">&nbsp;&nbsp;Course Materials</h2>
+                                <ul class="matBox_list">
+                                    <li><i class="fa fa-file-pdf-o" aria-hidden="true"></i><a class="download">Course Syllabus</a></li>
+                                    <li><i class="fa fa-file-pdf-o" aria-hidden="true"></i><a class="download">Book's Outline</a></li>
+                                    <li><i class="fa fa-file-pdf-o" aria-hidden="true"></i><a class="download">Glossary of Terms</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="lesson_box_footer"><span>&#169;</span>Hebron Ministerial Institute</div>
+                </div>
+                
+                <!-- start THE FORUM MODAL WINDOW -->
+                <div id="myModal" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+
+                        <!-- Modal header -->
+                        <div class="modal-header">
+                            <span class="close">&times;</span>
+                            <h3>Add a Post<i class="fa fa-pencil-square-o" aria-hidden="true"></i></h3>
+                        </div>
+
+                        <div class="modal-subheader">
+                                <h4 id="post_type_title">Post Type</h4>
+                                <div class="modal-postType">
+                                    <span id="question"><i class="fa fa-question-circle-o" aria-hidden="true"></i>Question</span>
+                                    <span id="comentary"><i class="fa fa-comments-o" aria-hidden="true"></i>Comentary</span>
+                                </div>
+
+                        </div>
+
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <h5>Hebrews</h5>
+                            <p>Lesson 1/ A. Purpose of the Book</p>
+
+                            <form action="#">
+                                <h4>Title<span id="title_comentary">Add a Clear & Descriptive Title</span></h4>
+                                <input type="text" name="tname"><br>
+                                <h4 id="textarea_title"> Your Question or Idea</h4>
+                                <textarea rows="5" name="description">
+                                </textarea>
+                            </form>
+
+                        </div>
+
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <h5 id="submit_button">submit</h5>
+                            <span id="cancel_button">cancel</span>
+                        </div>
+
+                    </div>
+
+                </div><!-- <!-- finish THE FORUM MODAL WINDOW  -->
+        
+                
+        
+        </div>
+            
+            
+        <!-- TRANSCRIPT SECTION -->
+            
+            <div id="transcript_section" class="transcript_open">
+                
+                <div id="transcript_text" class="transcript_container">
+                    <div class="subtitles_header" id="subtitle_header">
+                        <button id="subtitles" data-state="subtitles"><i class="material-icons" id="subtitles_button">subtitles</i>CC</button>
+                        
+                    </div>
+                    <div id="buttons_container"></div>
+                    <div id="interactive_text">
+                        
+                        <div id="interactive_text_content">
+                            <span class="inter_title"><i class="material-icons" id="interactive_titleButton">touch_app</i>Interactive Transcript</span>
+                            
+                            <div class="transcript_line"><span id="c1" data-time="0" class="cue"><span class="cue_time">0:00</span><span class="cue_text">Presentacion</span></span></div>
+    
+                            <div class="transcript_line"><span id="c2" class="cue" data-time="43.240" aria-live="rude"><span class="cue_time">0:43</span><span class="cue_text">Salvador que hombre mortal puede tocar la belleza de este libro de Hebreos sin arruinarla Senor.</span></span></div>
+                            
+                            <div class="transcript_line"><span id="c3" class="cue" data-time="71.130" aria-live="rude"><span class="cue_time">1:11</span><span class="cue_text">Somos incapaces de tocar un libro tan sublime, tan precioso, con un mensaje directamente de tu corazon Senor.</span></span></div>
+                            
+                            <div class="transcript_line"><span id="c4" class="cue" data-time="97.130" aria-live="rude"><span class="cue_time">1:37</span><span class="cue_text">Por eso Cristo te suplico que en estos d&#237;as, que seas tu nuestro maestro, que tu nos partas el Pan de Vida.</span></span></div>
+                            
+                            <div class="transcript_line"><span id="c5" class="cue" data-time="117.935" aria-live="rude"><span class="cue_time">1:57</span><span class="cue_text">Abre nuestros ojos y nuestros esp&#237;ritus, para que podamos ver la gloria de tu rostro que resplandece a trav&#233;s de este mensaje de Hebreos.</span></span></div>
+                            
+                            <div class="transcript_line"><span id="c5" class="cue" data-time="139.835" aria-live="rude"><span class="cue_time">2:19</span><span class="cue_text">Abre nuestros corazones a la revelaci&#243;n de tu belleza que hay aqu&#237;</span></span></div>
+                            
+                            <div class="transcript_line"><span id="c5" class="cue" data-time="149.735" aria-live="rude"><span class="cue_time">2:29</span><span class="cue_text">Para que nunca mas caminemos de la misma manera Se&#241;or.</span></span></div>
+                            
+                            <div class="transcript_line"><span id="c5" class="cue" data-time="156.655" aria-live="rude"><span class="cue_time">2:36</span><span class="cue_text">Oh planta en lo mas profundo de nuestro coraz&#243;n las bellezas, las verdades, la gloria que hay aqu&#237; Se&#241;or.</span></span></div>
+                            
+                            <div class="transcript_line"><span id="c5" class="cue" data-time="173.355" aria-live="rude"><span class="cue_time">2:53</span><span class="cue_text">Para que nunca sean olvidadas, Oh, arraiga en nuestro coraz&#243;n estas verdades.</span></span></div>
+                            
+                            <div class="transcript_line"><span id="c5" class="cue" data-time="188.755" aria-live="rude"><span class="cue_time">3:08</span><span class="cue_text">Oh Salvador que siempre en el valle de la sombra de la muerte tengamos la gracia para regresar a la belleza revelada aqu&#237; Se&#241;or.</span></span></div>
+                            
+                            <div class="transcript_line"><span id="c5" class="cue" data-time="208.788" aria-live="rude"><span class="cue_time">3:28</span><span class="cue_text">Cristo Jes&#250;s estamos esperando en ti, esperando en ti, Oh maestro de Galilea ens&#233;&#241;anos por favor.</span></span></div>
+                            
+                            <div class="transcript_line"><span id="c5" class="cue" data-time="226.488" aria-live="rude"><span class="cue_time">3:46</span><span class="cue_text">Padre en el nombre de tu Hijo precioso, te lo pedimos, te lo rogamos, d&#225;ndote gracias.</span></span></div>
+                            
+                            <div class="transcript_line"><span id="c5" class="cue" data-time="242.988" aria-live="rude"><span class="cue_time">4:02</span><span class="cue_text">Por las migajas de tu mesa, gracias Se&#241;or.</span></span></div>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                
+                <div id="note_taker" class="note_container">
+                    <div id="nt_header">
+                        <div class="nt_icons" id="nt_file">File<i class="fa fa-caret-down" aria-hidden="true"></i></div>
+                        <div class="nt_icons"><i class="fa fa-undo" aria-hidden="true"></i></div>
+                        <div class="nt_icons"><i class="fa fa-repeat" aria-hidden="true"></i></div>
+                        <div class="nt_icons"><i class="fa fa-bold" aria-hidden="true"></i></div>
+                        <div class="nt_icons"><i class="fa fa-italic" aria-hidden="true"></i></div>
+                        <div class="nt_icons"><i class="fa fa-underline" aria-hidden="true"></i></div>
+                        <div class="nt_icons"><i class="fa fa-align-left" aria-hidden="true"></i></div>
+                        <div class="nt_icons"><i class="fa fa-align-center" aria-hidden="true"></i></div>
+                        <div class="nt_icons"><i class="fa fa-align-right" aria-hidden="true"></i></div>
+                        <div class="nt_icons"><i class="fa fa-align-justify" aria-hidden="true"></i></div>
+                        <div class="nt_icons"><i class="fa fa-list-ul" aria-hidden="true"></i></div>
+                        <div class="nt_icons"><i class="fa fa-list-ol" aria-hidden="true"></i></div>
+                        <div class="nt_icons"><i class="fa fa-link" aria-hidden="true"></i></div>
+                        <div class="nt_icons"><i class="fa fa-picture-o" aria-hidden="true"></i></div>
+                    </div>
+                    <div id="nt_textBox">TextArea</div>
+                </div>
+            </div>
+            </div>
+    </div>
+    <!-- Finish of VIDEO SECTION -->
+    
+    
+    <div id="myModalexercise"></div>
+    
+    <!-- START FOOTER -->
+    
+    <div class="square-box">
+            <div class="square-content">
+                <div>
+                    <div class="square-innertext">
+                        <p>Join Our Community. Subscribe to Our Newsletter.</p>
+                        <p><span>ENTER YOUR EMAIL<i class="fa fa-envelope-o" aria-hidden="true"></i></span><span>SUBSCRIBE NOW<i class="fa fa-pencil-square-o" aria-hidden="true"></i></span></p>
+                    </div>
+                    
+                    <!-- Line Two: Central Section -->
+                    <div class="square-line2">
+                        
+                        <!--Column One: Logo Area-->
+                        <div>
+                            <object id="footer_logo" type="image/svg+xml" data="./svg/HMI_FooterLogo.svg"></object>
+                            <h3 class="padded-multiline"><span class="logo">HEBRON MINISTERIAL INSTITUTE</span></h3>
+                            <div class="logo_footer">
+                            <span>Has the Main purpouse to prepare Leaders for the coming harvest helping God's people to enter into a deeper relationship with Jesus Christ.</span></div>
+                        </div>
+                        
+                        <!--Column Two: Links Area Left-->
+   
+                        <div>
+                            <p><i class="fa fa-users" aria-hidden="true"></i>About Us</p>
+                            <p><i class="fa fa-graduation-cap" aria-hidden="true"></i>Admissions</p>
+                            <p><i class="fa fa-credit-card-alt" aria-hidden="true"></i>Tuitions/Scholarships</p>
+                            <p><i class="fa fa-calendar-check-o" aria-hidden="true"></i>Academic Calendar</p>
+                        </div>
+                        
+                        <!--Column Three: Links Area Right-->
+                        <div>
+                            <p><i class="fa fa-heart-o" aria-hidden="true"></i>Donations</p>
+                            <p><i class="fa fa-cart-plus" aria-hidden="true"></i>Online Store</p>
+                            <p><i class="fa fa-address-card-o" aria-hidden="true"></i>Faculty</p>
+                            <p><i class="fa fa-university" aria-hidden="true"></i>Campus</p>
+                        </div>
+                        <!--Column Four: Image-->
+                        <div><img src="images/PoterHands.jpg"></div>
+                    </div>
+                    <div class="square-line3">
+                        <div><h5 class="white-text text-lighten-3" id="copyright">&#169; <a class="white-text text-lighten-3" href="http://hebronministries.com">Hebron Ministries International</a></h5></div>
+                        <div>
+                            <span><i class="fa fa-question-circle" aria-hidden="true"></i><span>FAQ</span></span>
+                            <span><i class="fa fa-phone-square" aria-hidden="true"></i><span>Support</span></span>
+                            <span><i class="fa fa-share-alt-square" aria-hidden="true"></i><span>Share</span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    
+    <!-- END FOOTER -->
+    
+    
+    <!-- scripts -->
+    <script src="http://code.jquery.com/jquery-1.12.0.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/index.js"></script>
+    <script src="js/video-player.js"></script>
+</body>
+</html>
+<!--
+<ul class="dropdown_menu" id="about_dropup">
+                    <li>Why MHI?</li>
+                    <li>Vision, Mission & Values</li>
+                    <li>History</li>
+                    <li>President</li>
+                    <li>Faculty</li>
+                </ul>
+
+<ul class="dropdown_menu" id="language_dropup">
+                    <li>English</li>
+                    <li>Spanish</li>
+                    <li>Portuguese</li>
+                    <li>French</li>
+                                        
+</ul>-->
