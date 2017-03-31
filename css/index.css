@@ -568,6 +568,13 @@ div#prev:hover, div#next:hover {
     height: 95%;
 }
 
+/* Video Gif animated Loader */
+
+video.loading {
+    background:  black url(../images/loader.gif) center center no-repeat;
+}
+
+
 /* Video Cues(Subtitles)*/
 
 /*Text on screen*/
