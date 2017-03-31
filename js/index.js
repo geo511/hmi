@@ -326,6 +326,17 @@ $("#interactive_text_content").on("click", "div", function( event) {
 
 var $video = $("#video");
 
+/* Video Loader Gif */
+
+$video.on('loadstart', function (event) {
+    $(this).addClass('loading');
+});
+$video.on('canplay', function (event) {
+    $(this).removeClass('loading');
+});
+
+
+
 $video.on("timeupdate", function(evt){
     if (this.paused || video.ended){
         return;
