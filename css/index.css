@@ -571,7 +571,7 @@ div#prev:hover, div#next:hover {
 /* Video Gif animated Loader */
 
 video.loading {
-    background:  black url(../images/loader(2).gif) center center no-repeat;
+    background:  black url(../images/loader.gif) center center no-repeat;
 }
 
 
