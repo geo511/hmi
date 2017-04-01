@@ -332,7 +332,7 @@ $video.on('loadstart', function (event) {
     $(this).addClass('loading');
 });
 $video.on('canplay', function (event) {
-    $(this).removeClass('loading').fadeIn(1000);
+    $(this).removeClass('loading');
 });
 
 
