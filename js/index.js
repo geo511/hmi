@@ -329,10 +329,10 @@ var $video = $("#video");
 /* Video Loader Gif */
 
 $video.on('loadstart', function (event) {
-    $(this).addClass('loading');
+    $(this).addClass('loading').fadeIn(1000);
 });
 $video.on('canplay', function (event) {
-    $(this).removeClass('loading');
+    $(this).removeClass('loading').fadeOut(1000);
 });
 
 
