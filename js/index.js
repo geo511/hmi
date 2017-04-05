@@ -519,7 +519,7 @@ $progressBar[0].addEventListener("change", function(){
 //Update progress bar as video plays
 $video[0].addEventListener("timeupdate", function(){
     var value = (100/ $video[0].duration) * $video[0].currentTime;
-    $progress.css("width", value+"%");
+    $progressBar[0].value = value;
 });
 
 //Play/pause on button click
