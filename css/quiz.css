@@ -492,4 +492,11 @@ object {
 	opacity: 0.3;
 }
 
+@media screen and (max-width: 1950px) {
+    object {
+        margin-top: -4%;
+        margin-left: 47.5%;
+    }
+}
+
 
