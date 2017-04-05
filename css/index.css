@@ -1747,6 +1747,12 @@ div#transcript_section {
 
 /* Transcript Text and TextArea Column Media Queries */
 
+@media screen and (max-width: 1950px) {
+    #nt_textBox {
+        width: 450%;
+    }
+}
+
 @media screen and (max-width: 1500px){
     #interactive_text_content {
         max-height: 18vh;
