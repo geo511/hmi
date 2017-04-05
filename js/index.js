@@ -49,7 +49,9 @@ function closeNav() {
 var transcriptIcon = document.getElementById("transcript_icon");
 
 transcriptIcon.addEventListener('click', function() {
-  document.getElementById("transcript_section").classList.toggle('transcript_close');
+    var textboxElement = document.getElementById("nt_textBox");
+    document.getElementById("transcript_section").classList.toggle('transcript_close');
+    textboxElement.classList.toggle("nt_tBoxi");
 });
 
 /************************/
