@@ -342,21 +342,22 @@ $video.on("timeupdate", function(evt){
         return;
     }
     
-    var current = -1;
     var cues = document.getElementsByClassName("cue");
-    var trans_text = $("#interactive_text_content");
+    var trans_text = document.getElementById("interactive_text");
     
         
-    for (i=0; i<cues.length; i++){
-        var cueTime = cues[i].getAttribute("data-time");
-        if (/*cues[i].className.indexOf("current") == -1 &&*/
-           this.currentTime >= parseFloat(cueTime) &&
-           this.currentTime < parseFloat(cueTime)) {
-                //trans_text.scrollTop = cues[i].offsetTop - trans_text.offsetTop;
-                console.log("hello");
+    for( i = 0; i < cues.length; i++){
+        if (video.currentTime > parseFloat(cues.item(i).getAttribute('data-time')) || video.currentTime < parseFloat(cues.item(i).getAttribute('data-time')) ) {
+            cues.item(i).classList.remove("cue_current");
         }
+        if (video.currentTime >= parseFloat(cues.item(i).getAttribute('data-time')) &&
+           video.currentTime < parseFloat(cues.item(i+1).getAttribute('data-time'))) {
+            cues.item(i).classList.add("cue_current");
+            //cues.item(i).offsetTop/2;
+            trans_text.scrollTop = cues.item(i).offsetTop - trans_text.offsetTop;
+        }
+            
     }
-    
 });
 
 /***************************
