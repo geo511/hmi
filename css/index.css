@@ -668,6 +668,11 @@ video::cue {
     display: table-row;
 }
 
+.cue_current {
+    background: #484848;
+    color: #cecece;
+}
+
 .cue:hover {
     cursor: pointer;
     background: #484848;
