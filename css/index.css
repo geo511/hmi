@@ -1708,10 +1708,20 @@ div#transcript_section {
     text-align: center;
 }
 
-#nt_textBox {
+.nt_tBox {
     background:#f2f2f2;
     color: gray;
-    width: 368%;
+    width: 365%;
+    margin: 0.4vw;
+    border: 1px solid gray;
+    height: 95%;
+    overflow-y: scroll;
+}
+
+.nt_tBoxi {
+    background:#f2f2f2;
+    color: gray;
+    width: 300% !important;
     margin: 0.4vw;
     border: 1px solid gray;
     height: 95%;
